@@ -22,7 +22,7 @@ class NewTree(pygame.sprite.Sprite):
         global shiftindex
         if shiftindex - 125 < self.basepos < shiftindex + 925:
             self.treepos = (self.basepos - shiftindex, 300)
-            self.tree = pygame.image.load('./Dog park simulator/tree pixelated test.png')
+            self.tree = pygame.image.load('./tree pixelated test.png')
             self.rect = self.tree.get_rect(midbottom = (self.treepos[0] + 25, self.treepos[1]))
             screen.blit(self.tree, self.rect)
 
@@ -33,18 +33,18 @@ class Dog(pygame.sprite.Sprite):
 #        height = self.height
 #        breed = self.breed
 #        sound = self.sound
-        self.playerright = pygame.image.load('./Dog park simulator/Player/dog pixelated right.png').convert_alpha()
-        self.playerleft = pygame.image.load('./Dog park simulator/Player/dog pixelated left.png').convert_alpha()
+        self.playerright = pygame.image.load('./Player/dog pixelated right.png').convert_alpha()
+        self.playerleft = pygame.image.load('./Player/dog pixelated left.png').convert_alpha()
         self.player_rect = self.playerright.get_rect(midbottom = (400,325))
         self.poslist = []
-        self.playerleft1 = pygame.image.load('./Dog park simulator/Player/dog pixelated walk left 1.png')
-        self.playerleft2 = pygame.image.load('./Dog park simulator/Player/dog pixelated walk left 2.png')
-        self.playerleft3 = pygame.image.load('./Dog park simulator/Player/dog pixelated walk left 3.png')
-        self.playerleft4 = pygame.image.load('./Dog park simulator/Player/dog pixelated walk left 4.png')
-        self.playerright1 = pygame.image.load('./Dog park simulator/Player/dog pixelated walk right 1.png')
-        self.playerright2 = pygame.image.load('./Dog park simulator/Player/dog pixelated walk right 2.png')
-        self.playerright3 = pygame.image.load('./Dog park simulator/Player/dog pixelated walk right 3.png')
-        self.playerright4 = pygame.image.load('./Dog park simulator/Player/dog pixelated walk right 4.png')
+        self.playerleft1 = pygame.image.load('./Player/dog pixelated walk left 1.png')
+        self.playerleft2 = pygame.image.load('./Player/dog pixelated walk left 2.png')
+        self.playerleft3 = pygame.image.load('./Player/dog pixelated walk left 3.png')
+        self.playerleft4 = pygame.image.load('./Player/dog pixelated walk left 4.png')
+        self.playerright1 = pygame.image.load('./Player/dog pixelated walk right 1.png')
+        self.playerright2 = pygame.image.load('./Player/dog pixelated walk right 2.png')
+        self.playerright3 = pygame.image.load('./Player/dog pixelated walk right 3.png')
+        self.playerright4 = pygame.image.load('./Player/dog pixelated walk right 4.png')
         self.walkleft = [self.playerleft1, self.playerleft2, self.playerleft3, self.playerleft4]
         self.walkright = [self.playerright1, self.playerright2, self.playerright3, self.playerright4]
         self.costume = 1
@@ -97,16 +97,16 @@ class NPCDog(pygame.sprite.Sprite):
         self.costume = 1
         self.blit = True
         self.walkcooldown = 0
-        self.dogleft = pygame.image.load(f"./Dog park simulator/{self.dogtype}/dog left.png")
-        self.dogleft1 = pygame.image.load(f"./Dog park simulator/{self.dogtype}/dog left 1.png")
-        self.dogleft2 = pygame.image.load(f"./Dog park simulator/{self.dogtype}/dog left 2.png")
-        self.dogleft3 = pygame.image.load(f"./Dog park simulator/{self.dogtype}/dog left 3.png")
-        self.dogleft4 = pygame.image.load(f"./Dog park simulator/{self.dogtype}/dog left 4.png")
-        self.dogright = pygame.image.load(f"./Dog park simulator/{self.dogtype}/dog right.png")
-        self.dogright1 = pygame.image.load(f"./Dog park simulator/{self.dogtype}/dog right 1.png")
-        self.dogright2 = pygame.image.load(f"./Dog park simulator/{self.dogtype}/dog right 2.png")
-        self.dogright3 = pygame.image.load(f"./Dog park simulator/{self.dogtype}/dog right 3.png")
-        self.dogright4 = pygame.image.load(f"./Dog park simulator/{self.dogtype}/dog right 4.png")
+        self.dogleft = pygame.image.load(f"./{self.dogtype}/dog left.png")
+        self.dogleft1 = pygame.image.load(f"./{self.dogtype}/dog left 1.png")
+        self.dogleft2 = pygame.image.load(f"./{self.dogtype}/dog left 2.png")
+        self.dogleft3 = pygame.image.load(f"./{self.dogtype}/dog left 3.png")
+        self.dogleft4 = pygame.image.load(f"./{self.dogtype}/dog left 4.png")
+        self.dogright = pygame.image.load(f"./{self.dogtype}/dog right.png")
+        self.dogright1 = pygame.image.load(f"./{self.dogtype}/dog right 1.png")
+        self.dogright2 = pygame.image.load(f"./{self.dogtype}/dog right 2.png")
+        self.dogright3 = pygame.image.load(f"./{self.dogtype}/dog right 3.png")
+        self.dogright4 = pygame.image.load(f"./{self.dogtype}/dog right 4.png")
         self.walkleft = [self.dogleft1, self.dogleft2, self.dogleft3, self.dogleft4]
         self.walkright = [self.dogright1, self.dogright2, self.dogright3, self.dogright4]
         self.dogrect = self.dogright.get_rect(midbottom = (basepos, 325))
